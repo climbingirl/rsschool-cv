@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Svetlana Ivanova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#summary" class="nav__link">About me</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#code" class="nav__link">Code example</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#languages" class="nav__link">Languages</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <aside class="aside">
+                <section class="profile">
+                    <img class="profile__photo" src="assets/img/avatar.jpg" alt="Svetlana's photo">
+                    <h1 class="profile__title">Svetlana Ivanova</h1>
+                    <p class="profile__position">JS/Front-end Developer</p>
+                </section>
+                <section class="contacts" id="contacts">
+                    <h2 class="section__title">Contacts</h2>
+                    <ul class="contacts__list">
+                        <li class="contacts__item"><span>E-mail: </span><a href="mailto:svet777056@gmail.com">svet777056@gmail.com</a></li>
+                        <li class="contacts__item"><span>Telegram: </span><a href="tg://resolve?domain=climbingirl">@climbingirl</a></li>
+                        <li class="contacts__item"><span>Discord: </span><a href="https://discordapp.com/users/874282301238939659" target="_blank">@Svetlana Ivanova#9601</a></li>
+                        <li class="contacts__item"><span>GitHub: </span><a href="https://github.com/climbingirl" target="_blank">climbingirl</a></li>
+                    </ul>
+                </section>
+                <section class="skills" id="skills">
+                    <h2 class="section__title">Skills</h2>
+                    <ul class="skills__list">
+                        <li class="skills__item">HTML5, BEM</li>
+                        <li class="skills__item">CSS3, SCSS</li>
+                        <li class="skills__item">JavaScript</li>
+                        <li class="skills__item">Git, GitHub</li>
+                        <li class="skills__item">Figma, Adobe Photoshop</li>
+                    </ul>
+                </section>
+                <section class="languages" id="languages">
+                    <h2 class="section__title">Languages</h2>
+                    <ul class="languages__list">
+                        <li class="language__item"><span>Russian</span> - native speaker</li>
+                        <li class="language__item"><span>English</span> - В1 (I took a foreign language course at Cambridge University. I practice English by communicating with friends from different countries)</li>
+                    </ul>
+                </section>
+            </aside>
+            <div class="main__content">
+                <section class="summary" id="summary">
+                    <h2 class="section__title">Briefly about myself</h2>
+                    <p>I’m a 30-year-old beginner web developer. I have a law degree and experience in this field. Wanting to try a new comparison of activities, I started to self-learn programming in my off-hours. At one point, I realized that I was very interested in programming, and I decided to change my profession. Plus, my experience as a lawyer helps me with the technical development documentation. I like to improve my programming skills and I see in this field unlimited possibilities for developing myself as a professional.</p>
+                </section>
+                <section class="education" id="education">
+                    <h2 class="section__title">Education</h2>
+                    <h4>University: <span>Kutafin Moscow State Law University (MSAL)</span></h4>
+                    <h4>Courses:</h4>
+                    <ul class="education__list">
+                        <li class="education__item"><a href="https://ru.code-basics.com/languages/html" target="_blank">Course HTML for beginners</a></li>
+                        <li class="education__item"><a href="https://ru.code-basics.com/languages/css" target="_blank">Course CSS for beginners</a></li>
+                        <li class="education__item"><a href="https://learn.javascript.ru/" target="_blank">JavaScript Tutorial on learnjavascript.ru</a> (in progress)</li>
+                        <li class="education__item"><a href="https://rs.school/js-stage0/" target="_blank">RS Schools Course «JavaScript/Front-end. Stage 0»</a></li>
+                        <li class="education__item"><a href="https://rs.school/js/" target="_blank">RS Schools Course «JavaScript/Front-end»</a> (in progress)</li>
+                    </ul>
+                </section>
+                <section class="code" id="code">
+                    <h2 class="section__title">Code example</h2>
+                    <p>Directions Reduction Kata from Codewars</p>
+                    <div class="code__box">
+                        <pre>
+                        <code>
+    function convert(input, source, target) {
+        const sourseSystem = source.length;
+        const targetSystem = target.length;
+        const indexSourceArr = [];
+        
+        for (const i of input) {
+            indexSourceArr.push(source.indexOf(i));
+        } 
+        
+        let decimal = 0;
+        
+        for (let index = 0; index < indexSourceArr.length; index++) {
+            const el = indexSourceArr[index];
+            const num = el * sourseSystem**(indexSourceArr.length - (index + 1));    
+            
+            decimal += num;
+        }
+        
+        const targetArr = [];
+        let mod = decimal;
+        
+        while(mod >= targetSystem) {
+            targetArr.unshift(mod % targetSystem);
+            mod = (Math.trunc(mod / targetSystem));
+        }
+        
+        if(mod < targetSystem) {
+            targetArr.unshift(mod)
+        }
+        
+        return targetArr.map(n => target[n]).join("");
+    }
+                        </code>
+                    </pre>
+                    </div>
+                </section>
+                <section class="projects" id="projects">
+                    <h2 class="section__title">Projects</h2>
+                    <div class="projects__inner">
+                        <div class="projects__item">
+                            <p class="projects__title">Training project landingpage Portfolio.</p>
+                            <a href="https://rolling-scopes-school.github.io/climbingirl-JSFEPRESCHOOL/portfolio/" target="_blank"><img class="projects__img" src="assets/img/portfolio.png" alt="Limpon screenshot"></a>
+                        </div>
+                        <div class="projects__item">
+                            <p class="projects__title">Training project landingpage Limpon.</p>
+                            <a href="https://climbingirl.github.io/" target="_blank"><img class="projects__img" src="assets/img/lompon.png" alt="Limpon screenshot"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <a class="footer__github" href="https://github.com/climbingirl" target="_blank">climbingirl</a>
+            <p class="footer__year">2022</p>
+            <a class="footer__rsschool" href="https://rs.school/js/" target="_blank">
+                <img src="assets/svg/rs_school_js.svg" width="86" height="32" alt="RS School logo">
+              </a>
+        </footer>
+    </div>
+    
+</body>
+</html>
