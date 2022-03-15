@@ -1,0 +1,238 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #959392;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+    row-gap: 15px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #b98c6f;
+    transition: 0.3;
+}
+a:hover{
+    color: #866754;
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.header, .aside, .footer{
+    background-color: #f4f4f4;
+}
+.header .nav__list{
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.nav__item{
+    padding-left: 10px;
+}
+.nav__item:first-child{
+    padding-left: 0;
+}
+.nav__link{
+    padding: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.section__title{
+    color: #444440;
+    opacity: 0.9;
+}
+.main{
+    display: flex;
+    column-gap: 15px;
+}
+.aside{
+    padding: 30px;
+    max-width: 330px;
+    min-width: 330px;
+    width: 100%;
+}
+.aside > section{
+    margin-bottom: 50px;
+}
+.profile{
+    text-align: center;
+}
+.profile__title{
+    color: #725a4b;
+    opacity: 0.9;
+}
+.profile__photo{
+    max-width: 200px;
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+.profile__position{
+    text-transform: uppercase;
+}
+.contacts__item > span{
+    font-weight: bolder;
+}
+.skills__item{
+    position: relative;
+    padding-left: 20px;
+}
+.skills__item::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #866754;
+    border-radius: 50%;
+}
+.language__item > span{
+    font-weight: bolder;
+    color: #866754;
+    opacity: 0.9;
+}
+.main__content > section {
+    margin-bottom: 45px;
+}
+.main__content > section:last-child {
+    margin-bottom: 0;
+}
+.education > h4{
+    font-weight: bolder;
+    color: #866754;
+    opacity: 0.9;
+    margin: 15px 0;
+}
+.education span{
+    color: #959392;
+}
+.education__item{
+    position: relative;
+    padding-left: 20px;
+}
+.education__item::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    background-color: #866754;
+    opacity: 0.8;
+    border-radius: 50%;
+}
+.code__box{
+    display: grid;
+}
+.code pre{
+    background-color: rgb(247, 245, 243);
+    overflow-x: auto;
+}
+.projects__item{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.projects__title{
+    margin-bottom: 35px;
+}
+.projects__img{
+    width: 70%;
+    transition: 0.5s;
+}
+.projects__img:hover{
+    transform: scale(1.2);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444440;
+    opacity: 0.9;
+    padding: 10px;
+}
+.footer__github{
+    color: #444440;
+    opacity: 0.9;
+    position: relative;
+    padding-left: 40px;
+}
+.footer__github::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: 32px;
+    height: 32px;
+    color: #725a4b;
+    opacity: 0.9;
+    background-image: url(assets/svg/github-logo.svg);
+}
+
+/* media queries */
+
+@media(max-width: 900px) {
+    .header .nav__list {
+        height: 85px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .nav__link{
+        padding: 5px;
+    }
+}
+@media(max-width: 810px){
+    .main{
+        flex-direction: column;
+    }
+    .aside{
+        display: flex;
+        max-width: none;
+        min-width: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }    
+    .profile{
+        flex-basis: 100%;
+    }
+    .languages{
+        max-width: 570px;
+    }
+}
+@media(max-width: 630px){
+    .aside{
+        justify-content: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .aside section{
+        flex-basis: 300px;
+    }
+}
