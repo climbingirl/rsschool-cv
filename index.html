@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Svetlana Ivanova</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -94,7 +94,7 @@
         
         let decimal = 0;
         
-        for (let index = 0; index < indexSourceArr.length; index++) {
+        for (let index = 0; index &lt; indexSourceArr.length; index++) {
             const el = indexSourceArr[index];
             const num = el * sourseSystem**(indexSourceArr.length - (index + 1));    
             
@@ -104,16 +104,16 @@
         const targetArr = [];
         let mod = decimal;
         
-        while(mod >= targetSystem) {
+        while(mod  &gt;= targetSystem) {
             targetArr.unshift(mod % targetSystem);
             mod = (Math.trunc(mod / targetSystem));
         }
         
-        if(mod < targetSystem) {
+        if(mod &lt; targetSystem) {
             targetArr.unshift(mod)
         }
         
-        return targetArr.map(n => target[n]).join("");
+        return targetArr.map(n =&gt; target[n]).join("");
     }
                         </code>
                     </pre>
@@ -139,7 +139,7 @@
             <p class="footer__year">2022</p>
             <a class="footer__rsschool" href="https://rs.school/js/" target="_blank">
                 <img src="assets/svg/rs_school_js.svg" width="86" height="32" alt="RS School logo">
-              </a>
+            </a>
         </footer>
     </div>
 </body>
