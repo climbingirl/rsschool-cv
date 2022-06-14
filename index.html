@@ -87,24 +87,32 @@
         const sourseSystem = source.length;
         const targetSystem = target.length;
         const indexSourceArr = [];
+
         for (const i of input) {
             indexSourceArr.push(source.indexOf(i));
         }
+
         let decimal = 0;
+
         for (let index = 0; index &lt; indexSourceArr.length; index++) {
             const el = indexSourceArr[index];
-            const num = el * sourseSystem**(indexSourceArr.length - (index + 1));
+            const num = el * sourseSystem**(indexSourceArr.length - (index + 1));   
+
             decimal += num;
         }
+
         const targetArr = [];
         let mod = decimal;
+
         while(mod  &gt;= targetSystem) {
             targetArr.unshift(mod % targetSystem);
             mod = (Math.trunc(mod / targetSystem));
         }
+
         if(mod &lt; targetSystem) {
             targetArr.unshift(mod)
         }
+
         return targetArr.map(n =&gt; target[n]).join("");
     }
                         </code>
