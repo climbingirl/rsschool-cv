@@ -95,7 +95,7 @@
         let decimal = 0;
         for (let index = 0; index &lt; indexSourceArr.length; index++) {
             const el = indexSourceArr[index];
-            const num = el * sourseSystem**(indexSourceArr.length - (index + 1));
+            const num = el * sourseSystem**(indexSourceArr.length - (index + 1));   
             decimal += num;
         }
 
@@ -110,7 +110,7 @@
         if(mod &lt; targetSystem) {
             targetArr.unshift(mod)
         }
-        
+
         return targetArr.map(n =&gt; target[n]).join("");
     }
                         </code>
